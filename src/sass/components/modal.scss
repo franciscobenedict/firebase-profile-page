@@ -1,0 +1,281 @@
+.modali-overlay {
+  opacity: 0.8 !important;
+}
+
+.modali-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  // padding: 3rem !important;
+  // width: calc(100vw - 6rem) !important;
+  .modali {
+    background: transparent;
+    border-radius: 0;
+    .modali-content {
+      pointer-events: auto;
+      margin: 20px auto;
+      width: 80%;
+
+      .modali-header {
+        background: rgba(255,255,255,0.4);
+        .modali-close-button {
+          background: transparent;
+        }
+        .modali-title {
+          color: #fff;
+          font-size: 2rem;
+        }
+      }
+
+      .modali-body {
+        background: rgba(255,255,255,0.4);
+        border-radius: 0;
+        border-top: 1px solid #CCC;
+        color: #fff;
+        padding: 0 1.5rem .5rem 1.5rem;
+        width: calc(100% - 3rem);
+        .modali-subheading {
+          color: #fff;
+           font-size: 1.4rem;
+           margin: 1rem 0;
+        }
+        input {
+          height: 40px;
+          margin-bottom: 10px;
+          padding: 10px;
+          width: calc(100% - 20px);
+        }
+        .form_button {
+          &:after {
+            background-color: #333;
+          }
+
+          .button_divider {
+            background: #888;
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+// .modali-wrapper {
+//   // display: inline-table;
+//   // position: fixed;
+//   padding: 50px;
+//   // top: 0;
+//   // left: 0;
+//   z-index: 1050;
+//   width: calc(100% - 100px);
+//   height: calc(100% - 100px);
+//   overflow-x: hidden;
+//   overflow-y: auto;
+//   outline: 0;
+//
+//   align-items: center;
+//   display: flex;
+//   justify-content: center;
+//
+//   .modali {
+//     z-index: 100;
+//     background: #333;
+//     color: #999;
+//     position: relative;
+//     // margin: 1.75rem auto;
+//     margin: 0 auto;
+//     border-radius: 3px;
+//     pointer-events: none;
+//
+//     display: flex;
+//     align-items: center;
+//     width: 100%;
+//
+//     .modali-content {
+//       pointer-events: auto;
+//       width: 100%;
+//       .modali-body { background: #333; }
+//
+//       .modali-footer {
+//         border-top: 1px inset #999;
+//         padding: 1rem 1.5rem;
+//         display: flex;
+//         // justify-content: flex-end;
+//       }
+//
+//       .modali-header {
+//         // border-bottom: 2px solid #999;
+//         display: flex;
+//         align-items: flex-start;
+//         padding: 1.5rem 1.5rem .5rem 1.5rem;
+//         .modali-title {
+//           font-weight: 700;
+//           font-size: 2rem;
+//         }
+//         .modali-close-button {
+//           padding: 1rem;
+//           background: white;
+//           margin: -1rem -1rem -1rem auto;
+//           font-size: 1.4rem;
+//           font-weight: 700;
+//           line-height: 1;
+//           color: #000;
+//           opacity: .3;
+//           cursor: pointer;
+//           border: none;
+//           outline: 0 !important;
+//           &:hover {
+//             opacity: .8;
+//             text-decoration: none;
+//           }
+//         }
+//       }
+//
+//       .modali-container {
+//         // div > {
+//         // max-height: calc(100vh - 10em);
+//         // padding: 20px;
+//         // overflow: auto;
+//         .modali-body {
+//           // background: #333 !important;
+//           border-bottom: 1px inset #000;
+//           border-radius: 0;
+//           // border-radius: .3rem;
+//           display: flex;
+//           flex-direction: column;
+//           max-height: calc(100vh - 11em);
+//           overflow: auto;
+//           padding: 0 20px 0.5em;
+//           position: relative;
+//           width: auto;
+//
+//           .modali-body-style {
+//             padding: .5rem 1.5rem;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+//
+//
+//
+//
+//
+//
+//
+//
+// @media (min-width: 1025px) {
+//   .modali-open {
+//     padding-right: 15px;
+//   }
+// }
+//
+// .modali-open {
+//   overflow: hidden;
+// }
+//
+// /* Size Classes */
+//
+// .modali-size-regular {
+//   min-width: 100%;
+//   // max-width: 500px;
+//   max-width: 100%;
+// }
+//
+// @media (min-width: 890px) {
+//   .modali-size-regular {
+//     min-width: 500px !important;
+//   }
+// }
+//
+// .modali-size-large {
+//   min-width: 100%;
+//   max-width: 800px;
+// }
+//
+// @media (min-width: 500px) {
+//   .modali-size-large {
+//     min-width: 800px !important;
+//   }
+// }
+//
+// /* Position Classes */
+//
+// .modali-wrapper-centered {
+//   top: 40% !important;
+// }
+//
+// @media (min-width: 1000px) {
+//   .modali-wrapper-centered {
+//     top: 0 !important;
+//     display: flex !important;
+//     align-items: center;
+//   }
+// }
+//
+// /* Button Classes */
+//
+// .modali-button {
+//   font-size: .9rem;
+//   font-weight: 700;
+//   border: none;
+//   border-radius: 3px;
+//   padding: .3rem 1rem;
+//   margin-left: .5rem;
+// }
+//
+// .modali-button-cancel {
+//   background: #fff;
+//   color: #000;
+// }
+//
+// .modali-button-destructive {
+//   background: #FF1654;
+//   color: #fff;
+// }
+//
+// .modali-button-default {
+//   background: #247BA0;
+//   color: #fff;
+// }
+//
+// /* Animation Classes */
+//
+// .modali-animated {
+//   -webkit-animation-duration: .5s;
+//   animation-duration: .5s;
+//   -webkit-animation-fill-mode: both;
+//   animation-fill-mode: both;
+// }
+//
+// .modali-animation-fade-in {
+//   -webkit-animation-name: fadeIn;
+//   animation-name: fadeIn;
+// }
+//
+// @-webkit-keyframes fadeIn {
+//   from {
+//     opacity: 0;
+//     -webkit-transform: translate3d(0, 30%, 0);
+//     transform: translate3d(0, 30%, 0);
+//   }
+//   to {
+//     opacity: 1;
+//     -webkit-transform: translate3d(0, 0, 0);
+//     transform: translate3d(0, 0, 0);
+//   }
+// }
+//
+// @keyframes fadeIn {
+//   from {
+//     opacity: 0;
+//     -webkit-transform: translate3d(0, 30%, 0);
+//     transform: translate3d(0, 30%, 0);
+//   }
+//   to {
+//     opacity: 1;
+//     -webkit-transform: translate3d(0, 0, 0);
+//     transform: translate3d(0, 0, 0);
+//   }
+// }

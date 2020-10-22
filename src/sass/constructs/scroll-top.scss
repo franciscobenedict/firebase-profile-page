@@ -1,0 +1,18 @@
+// SCROLL TO TOP
+.__scroll_to_top {
+  background-color: rgba(68,68,68,0.8) !important;
+  border: 10px solid rgba(255, 255, 255, 0.2);
+  bottom: 130px !important;
+  right: 0 !important;
+  transition: border 0.5s ease-in-out 0s, right !important;
+  z-index: 50 !important;
+
+  &:hover {
+    border: 10px solid rgba(0, 0, 0, 0.2);
+    transition: border 0.5s ease-in-out 0s, right !important;
+  }
+
+  @include respond-below(md) {
+    bottom: 50px !important;
+  }
+}

@@ -1,0 +1,51 @@
+// BLACK
+$black: #000000;
+$off_black: #444444;
+$black_opacity_10: rgba(0, 0, 0, 1);
+$black_opacity_09: rgba(0, 0, 0, 0.9);
+$black_opacity_08: rgba(0, 0, 0, 0.8);
+$black_opacity_07: rgba(0, 0, 0, 0.7);
+$black_opacity_06: rgba(0, 0, 0, 0.6);
+$black_opacity_05: rgba(0, 0, 0, 0.5);
+$black_opacity_04: rgba(0, 0, 0, 0.4);
+$black_opacity_03: rgba(0, 0, 0, 0.3);
+$black_opacity_02: rgba(0, 0, 0, 0.2);
+$black_opacity_01: rgba(0, 0, 0, 0.1);
+
+// WHITE
+$white: #FFFFFF;
+$off_white: #FEFEFE;
+
+// GREY
+$ultra_light_grey: #CCCCCC;
+$light_grey: #888888;
+$medium_grey: #666666;
+$dark_grey: #444444;
+$very_dark_grey: #333333;
+
+// PRIMARY
+$red: #A00000;
+$blue: blue;
+$green: #008000;
+$pale-green: #DDFFDD;
+$pale-purple: #E7DDF2;
+
+// LINKS
+$link_color: #3A1664;
+$link_color_hover: #79589f;
+$nav_link_color: #999999;
+$nav_link_color_hover: $dark_grey; //#FFFFFF;
+$nav_link_color_active: $pale-purple;
+
+// BACKGROUNDS
+$grid_item1_background_color: $pale-purple;             //rgba(68, 68, 68, 1);
+$grid_item2_background_color: rgba(153, 204, 255, 0.6); //#99CCFF;
+$grid_item3_background_color: rgba(153, 153, 255, 0.6); //#9999FF;
+$grid_item4_background_color: rgba(102, 153, 255, 0.6); //#6699FF;
+$grid_item5_background_color: rgba(204, 204, 255, 0.6); //#CCCCFF;
+$grid_item6_background_color: rgba(204, 153, 255, 0.6); //#CC99FF;
+$grid_item7_background_color: rgba(102, 204, 255, 0.6); //#66CCFF;
+
+// BUTTONS
+$site_button_color: #976bc7;
+$search_button_nav: $nav_link_color_hover;

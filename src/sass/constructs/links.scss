@@ -1,0 +1,16 @@
+a {
+  color: $link_color;
+  text-decoration: none;
+  background-color: transparent;
+
+  &:hover {
+    color: $link_color_hover;
+  }
+
+  &.white_text {
+    color: white;
+    &:hover {
+      color: grey;
+    }
+  }
+}

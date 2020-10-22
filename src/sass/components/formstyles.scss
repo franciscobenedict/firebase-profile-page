@@ -1,0 +1,214 @@
+// .form_styles {
+// 	background: #cecece;
+// 	padding: 40px 20px;
+// 	.form_input {
+// 		// border:1px solid #666;
+// 		margin-bottom: calc(1.2em + 18px);
+// 		margin-top: 30px;
+// 		border-radius: 3px;
+// 		position: relative;
+// 		width: 100%;
+//
+// 		.pound_symbol {
+// 			background: none;
+// 			font-size: 1.2em;
+// 			position: absolute;
+// 			top: 4px;
+// 			left: 15px;
+// 			z-index: 2;
+// 		}
+//
+// 		&.cursor {
+// 			position: relative;
+// 			i {
+// 				position: absolute;
+// 				// width: 35px;
+// 				// height: 1.5em;
+// 				// background-color: gray;
+// 				left: 15px;
+// 				top: 12px;
+// 				animation-name: blink;
+// 				animation-duration: 800ms;
+// 				animation-iteration-count: infinite;
+// 				opacity: 1;
+//
+// 				width: 0;
+// 			  height: 0;
+// 			  border-top: .5em solid transparent;
+// 			  border-bottom: .5em solid transparent;
+//
+// 			  border-left: .5em solid grey;
+// 			}
+// 			input i {
+// 				display: none;
+// 			}
+//
+// 			// input:not([value=""]){
+// 			//   // background-color: tomato;
+// 			// 	display: none;
+// 			// }
+// 		}
+//
+// 		@keyframes blink {
+// 			from { opacity: 1; }
+// 			to { opacity: 0; }
+// 		}
+//
+// 		> label {
+// 			// display: block;
+// 			// float: left;
+// 			// margin-top: -19px;
+// 			background: #999;
+// 			border-radius: 3px;
+// 			height: 2em;
+// 			line-height: 1em;
+// 			padding: .6em .6em .4em;
+// 			color: #fff;
+// 			font-size: 1em;
+// 			overflow: hidden;
+//
+// 			position: absolute;
+// 			top: -20px;
+// 			left: 15px;
+// 			z-index: 2;
+// 		}
+// 		> span {
+// 			background: #444;
+// 			display: block;
+// 			padding: 3px;
+// 			// margin: 0 -9px -9px -9px;
+// 			text-align: center;
+// 			color: #888;
+// 			font-size: .8em;
+// 		}
+//
+// 		input {
+// 			&[type="text"],
+// 			&[type="date"],
+// 			&[type="datetime"],
+// 			&[type="email"],
+// 			&[type="number"],
+// 			&[type="search"],
+// 			&[type="time"],
+// 			&[type="url"],
+// 			&[type="password"],
+// 			& textarea,
+// 			& select {
+// 				box-sizing: border-box;
+// 				-webkit-box-sizing: border-box;
+// 				-moz-box-sizing: border-box;
+// 				width: 100%;
+// 				display: block;
+// 				outline: none;
+// 				// border: none;
+// 				height: 2em;
+// 				line-height: 2em;
+// 				font-size: 1.2em;
+// 				font-weight: 400;
+// 				padding-left: 40px;
+// 				background-color: #eee;
+// 	  		color: #444;
+//
+// 				border: 1px #333 solid;
+// 			}
+// 		}
+//
+// 		input {
+// 			&[type="text"]:focus,
+// 			&[type="date"]:focus,
+// 			&[type="datetime"]:focus,
+// 			&[type="email"]:focus,
+// 			&[type="number"]:focus,
+// 			&[type="search"]:focus,
+// 			&[type="time"]:focus,
+// 			&[type="url"]:focus,
+// 			&[type="password"]:focus,
+// 			&textarea:focus,
+// 			&select:focus {
+// 				background-color: #cdd;
+// 				border-radius: 5px;
+// 			}
+// 			// &:not([value=""]):not(:focus):invalid{
+// 			//   background-color: tomato;
+// 			// }
+// 		}
+//
+// 		textarea{
+// 			resize:none;
+// 		}
+// 	}
+//
+// 	// FORM LAYOUT
+// 	//_______________________________
+// 	.form__input_group__password_validation, .form__input_group__email_password {
+// 		display: flex;
+// 		align-items: flex-start;
+// 		justify-content: space-between;
+//
+// 		.form_input_group, .form_password_validation,
+// 		.email_input, .password_input {
+// 			width: 50%;
+// 		}
+//
+// 		.form_input_group, .email_input { margin-right: 1em; }
+// 		.password_input { margin-left: 1em; }
+// 		.form_password_validation {
+// 			border: 1px solid #666;
+// 			margin-left: 1em;
+// 	    margin-bottom: 30px;
+// 			padding: .7em;
+// 	    border-radius: 3px;
+// 	    position: relative;
+// 			.password_validation_title {
+// 				background: #666;
+// 		    border-radius: 3px;
+// 		    height: .8em;
+// 		    line-height: .6em;
+// 		    padding: .6em .6em .4em;
+// 		    color: #B9B9B9;
+// 		    font-size: .6em;
+// 		    overflow: hidden;
+// 		    position: absolute;
+// 		    top: -18px;
+// 		    left: 15px;
+// 			}
+// 			.validation {
+// 				.validator {
+// 			    justify-content: flex-start;
+// 					margin-bottom: .2em;
+// 					&:last-child {
+// 						margin-bottom: 0;
+// 					}
+// 					.fa_icon {
+//
+// 					}
+// 					.validation-item {
+// 						font-size: .8em;
+// 						margin-left: .5em;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+//
+// 	.form_submit_button {
+// 		border:none;
+// 		margin-bottom: 0px;
+// 		padding: 20px;
+// 		text-align: center;
+// 		width: auto;
+// 		font-size: 1.5em;
+// 		background: rgba(45, 150, 54, 1);
+// 		color: #fff;
+// 		border: 1px solid #2d9636;
+// 		border-radius: 5px;
+//
+// 		&:hover {
+// 			background: rgba(45, 150, 54, 0.6);
+// 		}
+//
+// 		&:disabled {
+// 			background: rgba(45, 150, 54, 0.4);
+// 		}
+// 	}
+// }
