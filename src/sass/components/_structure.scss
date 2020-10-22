@@ -12,43 +12,71 @@ html {
   }
 
   #root {
-    background-image: url(../../assets/noche_en_santiago.jpg);
-    background-size: cover;
-    display: grid;
+    // background-image: url('https://firebasestorage.googleapis.com/v0/b/fir-auth-fbsite.appspot.com/o/images%2Fbackground%2Fwater-drop-on-leaf-1639205-1600x1200.jpg?alt=media&token=42f91314-13f2-4b2b-909f-49364486b8ee');
+    // background-size: cover;
+    // display: grid;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
-    grid-template-rows: auto 1fr auto;
+    // grid-template-rows: auto 1fr auto;
 
     @import './header';
-
-    main {
-      color: $white;
-      margin-top: 110px;
-      padding: 0 30px;
-      position: relative;
-
-      // HEADINGS
-      h1  { font-size: $heading1; }
-      h2  { font-size: $heading2; }
-      h3  { font-size: $heading3; }
-      h4  { font-size: $heading4; }
-      h5  { font-size: $heading5; }
-      p   { font-size: $normal_font_size }
-
-      @include respond-below(md) {
-        // HEADINGS
-        h1  { font-size: $heading1_s; }
-        h2  { font-size: $heading2_s; }
-        h3  { font-size: $heading3_s; }
-        h4  { font-size: $heading4_s; }
-        h5  { font-size: $heading5_s; }
-        p   { font-size: $medium_font_size }
-
-        padding-bottom: 0;
-      }
-
-      @import './grids';
-    }
-
     @import './footer';
+
+    .content {
+      flex: 1 0 auto;
+
+      background-image: url('https://firebasestorage.googleapis.com/v0/b/fir-auth-fbsite.appspot.com/o/images%2Fbackground%2Fwater-drop-on-leaf-1639205-1600x1200.jpg?alt=media&token=42f91314-13f2-4b2b-909f-49364486b8ee');
+      background-size: cover;
+      background-repeat:no-repeat;
+      background-attachment:fixed;
+      background-position:center;
+
+      main {
+        color: $white;
+        height: calc(100% - 148px);
+        color: #FFFFFF;
+        margin: 148px 0 74px;
+        padding: 0;
+        position: relative;
+        display: grid;
+
+        .opaque_bg {
+          background-color: rgba(0, 0, 0, 0.6);
+          justify-self: center;
+          align-self: center;
+          padding: 30px 30px;
+        }
+
+        // HEADINGS
+        h1  { font-size: $heading1; }
+        h2  { font-size: $heading2; }
+        h3  { font-size: $heading3; }
+        h4  { font-size: $heading4; }
+        h5  { font-size: $heading5; }
+        p   { font-size: $normal_font_size }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        p { color: white; }
+
+        @include respond-below(md) {
+          // HEADINGS
+          h1  { font-size: $heading1_s; }
+          h2  { font-size: $heading2_s; }
+          h3  { font-size: $heading3_s; }
+          h4  { font-size: $heading4_s; }
+          h5  { font-size: $heading5_s; }
+          p   { font-size: $medium_font_size }
+
+          padding-bottom: 0;
+        }
+
+        @import './grids';
+      }
+    }
   }
 }

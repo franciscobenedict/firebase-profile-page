@@ -5,14 +5,17 @@ import firebaseConfig from './store/base';
 import './App.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { HelmetProvider } from 'react-helmet-async';
 import LoadingOverlay from './components/LoadingOverlay';
 
 ReactDOM.render(
-  <Suspense fallback={ <LoadingOverlay /> }>
-    <FirebaseAppProvider firebaseConfig={firebaseConfig} name="LoginExample">
-      <App />
-    </FirebaseAppProvider>
-  </Suspense>,
+  <HelmetProvider>
+    <Suspense fallback={ <LoadingOverlay /> }>
+      <FirebaseAppProvider firebaseConfig={firebaseConfig} name="LoginExample">
+        <App />
+      </FirebaseAppProvider>
+    </Suspense>
+  </HelmetProvider>,
   document.getElementById('root')
 );
 

@@ -10,6 +10,7 @@ import ChangePasswordModal from './ChangePasswordModal';
 import ChangeImageModal from './ChangeImageModal';
 import Modali, { useModali } from 'modali';
 // import LoadingOverlay from './LoadingOverlay';
+import Layout from './partials/Layout';
 
 const ProfileView = ( { history } ) => {
   const currentUser = useUser();
@@ -47,63 +48,62 @@ const ProfileView = ( { history } ) => {
   });
 
   return (
-    <>
-      {/* processOverlay && <LoadingOverlay /> */}
-        <main>
-          <h1 className="">{userName}'s profile</h1>
-          <div className="user_details">
+    <Layout title={`${userName}'s profile`} description="This is the Firebase authentication Profile app">
+      <div className="opaque_bg">
+        <h1 className="">{userName}'s profile</h1>
+        <div className="user_details">
 
-            <div className="user_details_text">
-              <p>Registered email address: {userEmail}</p>
-            </div>
-
-            <div className="user_details_image">
-              { ! urlError ?
-                <img
-                  src={userImage}
-                  width="auto"
-                  height="150"
-                  alt="avatar"
-                  onError={onError}
-                /> :
-                <img
-                  src={placeHolderProfileImage}
-                  width="auto"
-                  height="150"
-                  alt="avatar"
-                />
-              }
-
-              { urlError  &&
-                <p>You do not currently have a profile image. <span onClick={toggleChangeImageModal}>Upload a profile image here</span></p>
-              }
-            </div>
-
-            {/*
-              <hr />
-              <a href="https://firebase.google.com/docs/auth/web/manage-users" target="_blank" rel="noopener noreferrer">HOW TO: Update a user's profile</a>
-            */}
+          <div className="user_details_text">
+            <p>Registered email address: {userEmail}</p>
           </div>
-          <hr />
 
-          <div className="profile_buttons_container">
-            <button className="button submit_btn form_button in_page_btn" onClick={toggleChangeNameModal}>Change profile name</button>
-            <Modali.Modal {...changeNameModal}>
-              <ChangeProfileNameModal />
-            </Modali.Modal>
+          <div className="user_details_image">
+            { ! urlError ?
+              <img
+                src={userImage}
+                width="auto"
+                height="150"
+                alt="avatar"
+                onError={onError}
+              /> :
+              <img
+                src={placeHolderProfileImage}
+                width="auto"
+                height="150"
+                alt="avatar"
+              />
+            }
 
-            <button className="button submit_btn form_button in_page_btn" onClick={toggleChangePasswordModal}>Change password</button>
-            <Modali.Modal {...changePasswordModal}>
-              <ChangePasswordModal />
-            </Modali.Modal>
-
-            <button className="button submit_btn form_button in_page_btn" onClick={toggleChangeImageModal}>Change image</button>
-            <Modali.Modal {...changeImageModal}>
-              <ChangeImageModal />
-            </Modali.Modal>
+            { urlError  &&
+              <p>You do not currently have a profile image. <span onClick={toggleChangeImageModal}>Upload a profile image here</span></p>
+            }
           </div>
-        </main>
-    </>
+
+          {/*
+            <hr />
+            <a href="https://firebase.google.com/docs/auth/web/manage-users" target="_blank" rel="noopener noreferrer">HOW TO: Update a user's profile</a>
+          */}
+        </div>
+        <hr />
+
+        <div className="profile_buttons_container">
+          <button className="button submit_btn form_button in_page_btn" onClick={toggleChangeNameModal}>Change profile name</button>
+          <Modali.Modal {...changeNameModal}>
+            <ChangeProfileNameModal />
+          </Modali.Modal>
+
+          <button className="button submit_btn form_button in_page_btn" onClick={toggleChangePasswordModal}>Change password</button>
+          <Modali.Modal {...changePasswordModal}>
+            <ChangePasswordModal />
+          </Modali.Modal>
+
+          <button className="button submit_btn form_button in_page_btn" onClick={toggleChangeImageModal}>Change image</button>
+          <Modali.Modal {...changeImageModal}>
+            <ChangeImageModal />
+          </Modali.Modal>
+        </div>
+      </div>
+    </Layout>
   )
 }
 

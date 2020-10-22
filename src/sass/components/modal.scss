@@ -14,7 +14,7 @@
     .modali-content {
       pointer-events: auto;
       margin: 20px auto;
-      width: 80%;
+      width: 100%;
 
       .modali-header {
         background: rgba(255,255,255,0.4);
@@ -33,7 +33,7 @@
         border-top: 1px solid #CCC;
         color: #fff;
         padding: 0 1.5rem .5rem 1.5rem;
-        width: calc(100% - 3rem);
+        width: 100%;
         .modali-subheading {
           color: #fff;
            font-size: 1.4rem;
@@ -43,7 +43,7 @@
           height: 40px;
           margin-bottom: 10px;
           padding: 10px;
-          width: calc(100% - 20px);
+          width: 100%;
         }
         .form_button {
           &:after {

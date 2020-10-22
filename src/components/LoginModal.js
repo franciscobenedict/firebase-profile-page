@@ -148,7 +148,6 @@ const LoginModal = ({ history }) => {
             </div>
           </button>
 
-
           {user.error && <p className="error">{user.error}</p>}
         </form>
       }
